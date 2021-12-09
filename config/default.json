@@ -1,5 +1,5 @@
 {
-    "mongoURI" : "mongodb+srv://sunrise-management:sunrise@cluster0.czkan.mongodb.net/sunriseDatabase?retryWrites=true&w=majority",
+    "mongoURI" : "mongodb+srv://sunrise-keepers:sunrise-keepers@cluster0.kxwtn.mongodb.net/sunrise-keepers?retryWrites=true&w=majority",
     "mongo_uri": "mongodb://localhost:27017",
     "secretOrKey": "sunrise",
     "jwtSecret" : "fZJ9K9c55hS(y7Qt)YB5QSq$kp9TP&_w%!(5v8&aVHM3E)j7n"
