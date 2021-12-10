@@ -76,10 +76,10 @@ app.use('/staffs', staffRouter)
 app.use('/students', studentRouter)
 app.use('/upload', uploadRouter)
 
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'build')))
 
 app.route('/*').get(function(req, res) { 
- return res.sendFile(path.join(__dirname, 'public/index.html')); 
+ return res.sendFile(path.join(__dirname, 'build/index.html')); 
 });
 
 
