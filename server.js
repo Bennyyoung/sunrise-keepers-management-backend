@@ -79,9 +79,9 @@ app.use('/upload', uploadRouter)
 //We use this to avoid the error: Cannot GET /login
 // Which should be after
 
-app.route('/*').get(function(req, res) { 
- return res.sendFile(path.join(__dirname, 'public/index.html')); 
-});
+// app.route('/*').get(function(req, res) { 
+//  return res.sendFile(path.join(__dirname, 'public/index.html')); 
+// });
 
 
 
