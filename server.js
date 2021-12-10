@@ -92,12 +92,12 @@ app.route('/*').get(function(req, res) {
 //     app.use
 // }
 
-if (process.env.NODE_ENV === "production") {
- app.use(express.static("build"));
- app.get("*", (req, res) => {
-   res.sendFile(path.resolve(__dirname, "build/index.html"));
- });
-}
+// if (process.env.NODE_ENV === "production") {
+//  app.use(express.static("build"));
+//  app.get("*", (req, res) => {
+//    res.sendFile(path.resolve(__dirname, "build/index.html"));
+//  });
+// }
 
 
 
