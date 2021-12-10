@@ -76,6 +76,10 @@ app.use('/staffs', staffRouter)
 app.use('/students', studentRouter)
 app.use('/upload', uploadRouter)
 
+app.route('/*').get(function(req, res) {
+ return res.sendFile(path.join(__dirname, 'public/index.html'));
+}
+
 
 // app.use('/grades', gradeRouter)
 // app.use('/expenses', expenseRouter)
