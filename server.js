@@ -76,38 +76,13 @@ app.use('/staffs', staffRouter)
 app.use('/students', studentRouter)
 app.use('/upload', uploadRouter)
 
-app.route('/*').get(function(req, res) {
- return res.sendFile(path.join(__dirname, 'public/index.html'));
-}
+//We use this to avoid the error: Cannot GET /login
+// Which should be after
 
-
-// app.use('/grades', gradeRouter)
-// app.use('/expenses', expenseRouter)
-// app.use('/fees', feesRouter)
+app.route('/*').get(function(req, res) { 
+ return res.sendFile(path.join(__dirname, 'public/index.html')); 
+});
 
 
 
 
-// if (process.env.NODE_ENV === "production") {
-//     app.use
-// }
-
-// if (process.env.NODE_ENV === "production") {
-//  app.use(express.static("client/build"));
-//  app.get("*", (req, res) => {
-//    res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
-//  });
-// }
-
-
-
-// 404 Error
-// app.use((req, res, next) => {
-//  next(createError(404));
-// });
-
-// app.use(function (err, req,res, next) {
-//  console.error(err.message);
-//  if (!err.statusCode) err.statusCode = 500;
-//  res.status(err.statusCode).send(err.message);
-// });
