@@ -24,22 +24,22 @@ const resultSchema = new Schema({
   type: Number,
   required: true
  },
- midtermtotal: {
-  type: Number,
-  required: true
- },
+ // midtermtotal: {
+ //  type: Number,
+ //  required: true
+ // },
  exam: {
   type: Number,
   required: true
  },
- examtotal: {
-  type: Number,
-  required: true
- },
- average: {
-  type: Number,
-  required: true
- },
+ // examtotal: {
+ //  type: Number,
+ //  required: true
+ // },
+ // average: {
+ //  type: Number,
+ //  required: true
+ // },
  position: {
   type: Number,
   required: true
