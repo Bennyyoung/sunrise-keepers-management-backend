@@ -36,11 +36,11 @@ app.get("/", (req, res) => {
  res.send("Server is running.");
 })
 
-const userRouter = require('./routes/api/user')
-const userAuth = require('./routes/api/auth')
-const staffRouter = require('./routes/api/staff')
-const studentRouter = require('./routes/api/student')
-const uploadRouter = require('./routes/api/upload')
+const userRouter = require('./routes/user')
+const userAuth = require('./routes/auth')
+const staffRouter = require('./routes/staff')
+const studentRouter = require('./routes/student')
+const uploadRouter = require('./routes/upload')
 
 app.use('/auth', userRouter)
 app.use('/staffs', staffRouter)
