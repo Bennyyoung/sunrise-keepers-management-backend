@@ -1,9 +1,11 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import path from 'path';
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
-const connectDB = require('./config/db');
+// const mongoose = require("mongoose");
+const express = require("express");
+const bodyParser = require('body-parser');
+// const path = require("path");
+const cookieParser = require('cookie-parser');
+const cors = require("cors");
+// const dotenv = require("dotenv");
+const connectDB= require('./config/db');
 
 const app = express();
 

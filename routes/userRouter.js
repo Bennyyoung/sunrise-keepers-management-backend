@@ -1,8 +1,8 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
 const User = require('../models/user.model')
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const auth = require('../middleware/auth')
 
 // Register

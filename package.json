@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Sunrise Keepers Management System",
   "main": "server.js",
-  "type": "module",
   "engines": {
     "node": "14.12.0",
     "npm": "6.13.6"

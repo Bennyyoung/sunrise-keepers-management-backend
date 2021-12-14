@@ -1,8 +1,8 @@
-import express from 'express';
+const express = require('express');
 
 const router = express.Router();
 let Upload = require('../models/upload.model')
-import multer from 'multer';
+const multer = require('multer');
 
 // Storage engine for multer
 const storageEngine = multer.diskStorage({
