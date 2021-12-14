@@ -1,7 +1,7 @@
 // const mongoose = require("mongoose");
 const express = require("express");
 const bodyParser = require('body-parser');
-// const path = require("path");
+const path = require("path");
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
 // const dotenv = require("dotenv");
@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 })
 
 const userRouter = require('./routes/userRouter')
-const userAuth = require('./routes/auth')
+// const userAuth = require('./routes/auth')
 const staffRouter = require('./routes/staff')
 const studentRouter = require('./routes/student')
 const uploadRouter = require('./routes/upload')
