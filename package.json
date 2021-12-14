@@ -9,7 +9,7 @@
     "npm": "6.13.6"
   },
   "scripts": {
-    "start": "cd backend && node -r esm server.js",
+    "start": "cd backend && node --es-module-specifier-resolution=node server.js",
     "dev": "cd client && npm start"
   },
   "keywords": [],

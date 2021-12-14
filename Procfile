@@ -1,1 +1,1 @@
-web: node -r esm server.js
+web: node --es-module-specifier-resolution=node server.js
