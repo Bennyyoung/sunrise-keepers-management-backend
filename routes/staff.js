@@ -2,7 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 let Staff = require('../models/staff.model');
-import auth from '../middleware/auth.js'
+const auth  = require('../middleware/auth')
 
 // Create Staff
 // router.route('/add-staff').post((req, res) => {
