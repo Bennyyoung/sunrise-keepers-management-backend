@@ -34,10 +34,11 @@ app.get("/", (req, res) => {
  res.send("Server is running.");
 })
 
-import userRouter from './routes/userRouter.js';
-import staffRouter from './routes/staff.js'
-import studentRouter from './routes/student.js';
-import uploadRouter from './routes/upload.js'
+const userRouter = require('./routes/api/user')
+const userAuth = require('./routes/api/auth')
+const staffRouter = require('./routes/api/staff')
+const studentRouter = require('./routes/api/student')
+const uploadRouter = require('./routes/api/upload')
 
 app.use('/auth', userRouter)
 app.use('/staffs', staffRouter)
