@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "Sunrise Keepers Management System",
   "main": "server.js",
+  "type": "module",
   "engines": {
     "node": "13.7.0",
     "npm": "6.13.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd backend && node server.js",
     "dev": "cd client && npm start"
   },
