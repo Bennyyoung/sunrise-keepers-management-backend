@@ -1,9 +1,9 @@
 import express from express
 const router = express.Router();
-const User = require("../models/user.model");
-import bycrypt from 'bycryptjs';
+import User from '../models/user.model.js'
+import bcrypt from 'bycryptjs';
 import jwt from 'jsonwebtoken';
-const auth = require('../middleware/auth')
+import auth from '../middleware/auth.js'
 
 // Register
 router.post("/", async (req, res) => {
