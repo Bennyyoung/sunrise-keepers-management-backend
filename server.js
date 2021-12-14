@@ -34,10 +34,10 @@ app.get("/", (req, res) => {
  res.send("Server is running.");
 })
 
-import userRouter from './routes/userRouter';
-import staffRouter from './routes/staff'
-import studentRouter from './routes/student';
-import uploadRouter from './routes/upload'
+import userRouter from './routes/userRouter.js';
+import staffRouter from './routes/staff.js'
+import studentRouter from './routes/student.js';
+import uploadRouter from './routes/upload.js'
 
 app.use('/auth', userRouter)
 app.use('/staffs', staffRouter)
