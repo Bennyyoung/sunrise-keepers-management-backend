@@ -1,5 +1,5 @@
-import cookieParser from 'cookie-parser';
-import jwt from 'jsonwebtoken'
+const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken')
 
 async function auth(req, res, next) {
     try {

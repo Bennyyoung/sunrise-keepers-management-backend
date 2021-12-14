@@ -1,4 +1,4 @@
-const express from 'express';
+const express = require('express');
 
 const router = express.Router();
 let Staff = require('../models/staff.model');
