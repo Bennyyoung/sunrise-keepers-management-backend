@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-import connectDB from './config/db.js'
+const connectDB = require('./config/db');
 
 const app = express();
 
