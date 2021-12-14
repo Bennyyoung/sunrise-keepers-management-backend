@@ -36,7 +36,7 @@ app.get("/", (req, res) => {
  res.send("Server is running.");
 })
 
-const userRouter = require('./routes/user')
+const userRouter = require('./routes/userRouter')
 const userAuth = require('./routes/auth')
 const staffRouter = require('./routes/staff')
 const studentRouter = require('./routes/student')
