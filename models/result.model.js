@@ -16,31 +16,11 @@ const resultSchema = new Schema({
   required: true,
   trim: true
  },
- classtest: {
+ test: {
   type: Number,
   required: true
  },
- midtermtest: {
-  type: Number,
-  required: true
- },
- // midtermtotal: {
- //  type: Number,
- //  required: true
- // },
  exam: {
-  type: Number,
-  required: true
- },
- // examtotal: {
- //  type: Number,
- //  required: true
- // },
- // average: {
- //  type: Number,
- //  required: true
- // },
- position: {
   type: Number,
   required: true
  },
