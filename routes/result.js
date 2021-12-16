@@ -13,13 +13,8 @@ router.route('/add').post((req, res) => {
   const studentname = req.body.studentname;
   const studentclass = req.body.studentclass;
   const subject = req.body.subject;
-  const classtest = req.body.classtest;
-  const midtermtest = req.body.midtermtest;
-  //  const midtermtotal = req.body.midtermtotal;
+  const test = req.body.test;
   const exam = req.body.exam;
-  //  const examtotal = req.body.examtotal;
-  //  const average = req.body.average;
-  const position = req.body.position;
   const resultdate = Date.parse(req.body.resultdate);
   const responsible = req.body.responsible;
 
@@ -27,13 +22,8 @@ router.route('/add').post((req, res) => {
     studentname,
     studentclass,
     subject,
-    classtest,
-    midtermtest,
-    // midtermtotal,
+    test,
     exam,
-    // examtotal,
-    // average,
-    position,
     resultdate,
     responsible
   });
@@ -60,13 +50,8 @@ router.route('/update/:id').post((req, res) => {
       result.studentname = req.body.studentname;
       student.studentclass = req.body.studentclass;
       result.subject = req.body.subject;
-      result.classtest = req.body.classtest;
-      result.midtermtest = req.body.midtermtest;
-      //  result.midtermtotal = req.body.midtermtotal;
+      result.test = req.body.test;
       result.exam = req.body.exam;
-      //  result.examtotal = req.body.examtotal;
-      //  result.average = req.body.average;
-      result.position = req.body.position;
       result.resultdate = Date.parse(req.body.resultdate);
       result.responsible = req.body.responsible;
 
