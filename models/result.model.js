@@ -7,6 +7,10 @@ const resultSchema = new Schema({
   required: true,
   trim: true
  },
+ studentfullname: {
+ type: String,
+ required: true
+ },
  studentclass: {
   type: String,
   required: true
