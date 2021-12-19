@@ -40,11 +40,13 @@ const userRouter = require('./routes/userRouter')
 // const userAuth = require('./routes/auth')
 const staffRouter = require('./routes/staff')
 const studentRouter = require('./routes/student')
+const resultRouter = require('./routes/result');
 const uploadRouter = require('./routes/upload')
 
 app.use('/auth', userRouter)
 app.use('/staffs', staffRouter)
 app.use('/students', studentRouter)
+app.use('/results', resultRouter)
 app.use('/upload', uploadRouter)
 
 app.use(express.static(path.join(__dirname, 'build')))
