@@ -11,6 +11,7 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const studentname = req.body.studentname;
+  const studentfullname = req.body.studentfullname
   const studentclass = req.body.studentclass;
   const subject = req.body.subject;
   const test = req.body.test;
@@ -20,6 +21,7 @@ router.route('/add').post((req, res) => {
 
   const newResult = new Result({
     studentname,
+    studentfullname
     studentclass,
     subject,
     test,
@@ -48,6 +50,7 @@ router.route('/update/:id').post((req, res) => {
   Result.findByIdAndUpdate(req.params.id)
     .then(result => {
       result.studentname = req.body.studentname;
+      result.studentfullname = req.body.studentfullname
       student.studentclass = req.body.studentclass;
       result.subject = req.body.subject;
       result.test = req.body.test;
