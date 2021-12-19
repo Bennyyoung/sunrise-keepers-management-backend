@@ -11,7 +11,7 @@ router.route('/').get((req, res) => {
 
 router.route('/add').post((req, res) => {
   const studentname = req.body.studentname;
-  const studentfullname = req.body.studentfullname
+  const studentfullname = req.body.studentfullname;
   const studentclass = req.body.studentclass;
   const subject = req.body.subject;
   const test = req.body.test;
@@ -21,7 +21,7 @@ router.route('/add').post((req, res) => {
 
   const newResult = new Result({
     studentname,
-    studentfullname
+    studentfullname,
     studentclass,
     subject,
     test,
