@@ -10,7 +10,7 @@ const connectDB = async () => {
 			useUnifiedTopology: true
 		});
     
-		console.log('MongoDB Connected...'+ process.env.MONGO_URI);
+		console.log('MongoDB Connected...');
     
 		mongoose.set('useFindAndModify', false);
 	} catch (err) {

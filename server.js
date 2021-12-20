@@ -52,9 +52,14 @@ app.use('/students', studentRouter)
 app.use('/results', resultRouter)
 app.use('/upload', uploadRouter)
 
-app.use(express.static(path.join(__dirname, 'build')))
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'build')))
+  
+  app.route('/*').get(function(req, res) { 
+   return res.sendFile(path.join(__dirname, 'build/index.html')); 
+  });
 
-app.route('/*').get(function(req, res) { 
- return res.sendFile(path.join(__dirname, 'build/index.html')); 
-});
+}
+
+
 
