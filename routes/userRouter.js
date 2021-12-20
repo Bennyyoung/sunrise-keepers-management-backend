@@ -48,7 +48,7 @@ router.post("/", async (req, res) => {
       {
         user: savedUser._id,
       },
-      'fZJ9K9c55hS(y7Qt)YB5QSq$kp9TP&_w%!(5v8&aVHM3E)j7n'
+      process.env.JWT_SECRET
     );
     console.log(token)
 
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
       {
         user: existingUser._id,
       },
-      'fZJ9K9c55hS(y7Qt)YB5QSq$kp9TP&_w%!(5v8&aVHM3E)j7n'
+      process.env.JWT_SECRET
     );
 
     // Send the token in a HTTP-only cookie
@@ -120,7 +120,7 @@ router.get("/loggedIn", (req, res) => {
 
     if (!token) return res.json(false);
 
-    jwt.verify(token, 'fZJ9K9c55hS(y7Qt)YB5QSq$kp9TP&_w%!(5v8&aVHM3E)j7n');
+    jwt.verify(token, process.env.JWT_SECRET);
 
     res.send(true);
   } catch (err) {

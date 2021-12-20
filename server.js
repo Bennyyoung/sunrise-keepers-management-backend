@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const path = require("path");
 const cookieParser = require('cookie-parser');
 const cors = require("cors");
-// const dotenv = require("dotenv");
+const dotenv = require("dotenv");
+dotenv.config();
 const connectDB= require('./config/db');
+
 
 const app = express();
 
@@ -16,8 +18,8 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true }));
 
 app.use(
  cors({origin: [
-   "https://sunrise-management-system.vercel.app/",
-   "https://sunrise-management-system.herokuapp.com/",
+   process.env.FRONT_END,
+   process.env.BACK_END,
   ],
 
   methods: ["GET", "PATCH", "OPTIONS", "POST", "PUT", "DELETE"],
@@ -30,6 +32,7 @@ app.listen(PORT, () => {
 });
 
 // Connect DB
+
 connectDB();
 
 app.get("/", (req, res) => {
@@ -54,3 +57,4 @@ app.use(express.static(path.join(__dirname, 'build')))
 app.route('/*').get(function(req, res) { 
  return res.sendFile(path.join(__dirname, 'build/index.html')); 
 });
+
