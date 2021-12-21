@@ -20,6 +20,8 @@ app.use(
  cors({origin: [
    process.env.FRONT_END,
    process.env.BACK_END,
+   process.env.REACT_APP_FRONT_END,
+   prcess.env.REACT_APP_BACK_END
   ],
 
   methods: ["GET", "PATCH", "OPTIONS", "POST", "PUT", "DELETE"],
