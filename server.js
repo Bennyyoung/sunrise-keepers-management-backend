@@ -18,10 +18,12 @@ app.use(bodyParser.urlencoded({limit: "30mb", extended: true }));
 
 app.use(
  cors({origin: [
-   process.env.FRONT_END,
-   process.env.BACK_END,
-   process.env.REACT_APP_FRONT_END,
-   process.env.REACT_APP_BACK_END
+  "https://sunrise-management-system.herokuapp.com",
+  "https://sunrise-management-system.vercel.app",
+  //  process.env.FRONT_END,
+  //  process.env.BACK_END,
+  //  process.env.REACT_APP_FRONT_END,
+  //  process.env.REACT_APP_BACK_END
   ],
 
   methods: ["GET", "PATCH", "OPTIONS", "POST", "PUT", "DELETE"],
