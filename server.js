@@ -22,6 +22,8 @@ app.use(
   // "https://sunrise-management-system.vercel.app",
    process.env.FRONT_END,
    process.env.BACK_END,
+   "http://localhost:3000",
+   "http://localhost:5000"
   //  process.env.REACT_APP_FRONT_END,
   //  process.env.REACT_APP_BACK_END
   ],
@@ -56,7 +58,7 @@ app.use('/students', studentRouter)
 app.use('/results', resultRouter)
 app.use('/upload', uploadRouter)
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production' || 'development') {
   app.use(express.static(path.join(__dirname, 'build')))
   
   app.route('/*').get(function(req, res) { 
