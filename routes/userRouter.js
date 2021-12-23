@@ -48,7 +48,7 @@ router.post("/", async (req, res) => {
       {
         user: savedUser._id,
       },
-      process.env.REACT_APP_JWT_SECRET
+      process.env.JWT_SECRET
     );
     console.log(token)
 
@@ -120,7 +120,7 @@ router.get("/loggedIn", (req, res) => {
 
     if (!token) return res.json(false);
 
-    jwt.verify(token, process.env.REACT_APP_JWT_SECRET);
+    jwt.verify(token, process.env.JWT_SECRET);
 
     res.send(true);
   } catch (err) {
